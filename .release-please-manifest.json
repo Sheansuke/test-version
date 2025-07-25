@@ -1,5 +1,7 @@
 {
-  ".": {
-    "component": "ib-mustang"
+  "packages": {
+    ".": {
+      "release-type": "node"
+    }
   }
 }
