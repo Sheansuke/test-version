@@ -1,5 +1,5 @@
 {
-  "packages/.": {
-    "component": "IB-Mustang"
+  ".": {
+    "component": "ib-mustang"
   }
 }
