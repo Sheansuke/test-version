@@ -1,3 +1,8 @@
 {
-  "ib-mustang": "0.1.0"
+  "packages": {
+    ".": {
+      "release-type": "node",
+      "version": "0.1.0"
+    }
+  }
 }
