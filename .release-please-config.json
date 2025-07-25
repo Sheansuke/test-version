@@ -1,14 +1,8 @@
 {
-  "branches": [
-    {
-      "branch": "release-personal",
-      "versioning": "semver",
-      "changelogPath": "CHANGELOG.md"
-    },
-    {
-      "branch": "release-empresarial",
-      "versioning": "semver",
-      "changelogPath": "CHANGELOG.md"
+  "packages": {
+    ".": {
+      "release-type": "node",
+      "bump-minor-pre-major": true
     }
-  ]
+  }
 }
