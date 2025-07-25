@@ -2,6 +2,5 @@
   "release-type": "node",
   "package-name": "test-version",
   "include-v-in-tags": true,
-  "bump-minor-pre-major": true,
   "changelog-path": "CHANGELOG.md"
 }
