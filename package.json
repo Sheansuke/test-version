@@ -5,22 +5,29 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:analyze": "cross-env ANALYZE=true next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/bundle-analyzer": "^15.4.2",
+    "@opentelemetry/api-logs": "^0.57.2",
+    "@opentelemetry/instrumentation": "^0.57.2",
+    "@opentelemetry/sdk-logs": "^0.57.2",
+    "@vercel/otel": "^1.13.0",
+    "next": "14.2.30",
     "react": "^18",
-    "react-dom": "^18",
-    "next": "14.2.30"
+    "react-dom": "^18"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "cross-env": "^7.0.3",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.30",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.30"
+    "typescript": "^5"
   }
 }

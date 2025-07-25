@@ -20,6 +20,63 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Docker Deployment Options
+
+Este proyecto incluye dos opciones de despliegue con Docker:
+
+### 1. Modo Standalone
+
+El modo standalone genera una aplicación completamente autónoma que no requiere dependencias de Node.js externas para ejecutarse.
+
+#### Configuración
+
+Para habilitar el modo standalone, asegúrate de que tu `next.config.mjs` incluya:
+
+```javascript
+const nextConfig = {
+  // otras configuraciones...
+  output: 'standalone'
+};
+```
+
+#### Construcción y ejecución
+
+```bash
+# Construir la imagen
+docker build -t nextjs-standalone -f Dockerfile .
+
+# Ejecutar el contenedor
+docker run -p 3000:3000 nextjs-standalone
+```
+
+### 2. Modo Regular
+
+El modo regular mantiene la estructura de archivos estándar de Next.js y utiliza `npm start` para ejecutar la aplicación.
+
+#### Configuración
+
+Para el modo regular, asegúrate de que tu `next.config.mjs` NO incluya la opción `output: 'standalone'`.
+
+#### Construcción y ejecución
+
+```bash
+# Construir la imagen
+docker build -t nextjs-regular -f Dockerfile.regular .
+
+# Ejecutar el contenedor
+docker run -p 3000:3000 nextjs-regular
+```
+
+### Comparación
+
+| Característica | Modo Standalone | Modo Regular |
+|----------------|-----------------|---------------|
+| Tamaño de imagen | Menor | Mayor |
+| Dependencias | Autónomo | Requiere node_modules |
+| Proceso de inicio | `node server.js` | `npm start` |
+| Tiempo de construcción | Similar | Similar |
+| Rendimiento | Similar | Similar |
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

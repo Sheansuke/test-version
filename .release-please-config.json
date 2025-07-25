@@ -1,0 +1,14 @@
+{
+  "branches": [
+    {
+      "branch": "release-personal",
+      "versioning": "semver",
+      "changelogPath": "CHANGELOG.md"
+    },
+    {
+      "branch": "release-empresarial",
+      "versioning": "semver",
+      "changelogPath": "CHANGELOG.md"
+    }
+  ]
+}
